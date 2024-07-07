@@ -10,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Montserrat','Inter var', ...defaultTheme.fontFamily.sans],
       },
+      spacing: {
+        '128': '32rem',
+      }
     },
   },
   plugins: [

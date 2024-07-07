@@ -1,0 +1,18 @@
+<header class="backdrop-blur-sm bg-white/10 sticky top-3 mx-3 rounded-lg">
+  <nav class="mx-auto flex max-w-7xl items-center justify-between p-1 lg:px-8" aria-label="Global">
+    <div class="flex lg:flex-1">
+      <div class="w-16">
+        <%= link_to image_tag("logo_icon.png"), home_index_path %>
+      </div>
+    </div>
+    <div class="mx-3 block rounded-lg px-4 py-2.5 text-base text-3xl font-black leading-7 text-2xl text-violet-900 hover:bg-purple-50">
+      <%= link_to "Accueil", home_index_path%>
+    </div>
+    <div class="mx-3 block rounded-lg px-4 py-2.5 text-base text-3xl font-black leading-7 text-2xl text-violet-900 hover:bg-purple-50">
+      <%= link_to "Portefolio", portefolio_index_path %>
+    </div>
+    <div class="mx-3 block rounded-lg px-4 py-2.5 text-base text-3xl font-black leading-7 text-2xl text-violet-900 hover:bg-purple-50">
+      <%= link_to "Contact", contact_index_path %>
+    </div>
+  </nav>
+</header>
