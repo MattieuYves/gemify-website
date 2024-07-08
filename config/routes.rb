@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   resources :portefolio, only: [:index, :show]
   resources :contact, only: [:index]
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "home#index"
 end
