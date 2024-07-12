@@ -16,10 +16,13 @@
 
   <body>
     <main class="">
-    <%= render "shared/navbar"  %>
+      <%= render "shared/navbar"  %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
-    <%= render "shared/scroll_to_top_btn"  %>
-
+      <%= render "shared/scroll_to_top_btn"  %>
+      <%= render "shared/footer"  %>
     </main>
+
   </body>
 </html>
