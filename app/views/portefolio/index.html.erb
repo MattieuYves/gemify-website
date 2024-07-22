@@ -2,3 +2,9 @@
   <%= image_tag "work_in_progress.svg"  %>
   <h1 class="text-xl text-violet-900 font-black text-center mt-8"> Work in Progress</h1>
 </div>
+
+<div class="container">
+  <%= portefolios.each do |portefolio| %>
+    <%= render "card_project.html.erb" %>
+  <%= end %>
+</div>
