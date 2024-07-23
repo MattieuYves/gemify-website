@@ -1,12 +1,12 @@
 <div class="row-span-4 border-2 rounded-lg border-purple-900">
-  <%= cl_image_tag portefolio.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @portefolio.photo, height: 300, width: 400, crop: :fill %>
   <div class="text-violet-900 text-center text-xl font-black my-3">
-    <%= portefolio.name %>
+    <%= @portefolio.name %>
   </div>
   <div class="">
-    <%= portefolio.video %>
+    <%= @portefolio.video %>
   </div>
   <div class="">
-    <%= portefolio.presentation %>
+    <%= @portefolio.presentation %>
   </div>
 </div>

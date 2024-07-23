@@ -3,8 +3,15 @@
   <h1 class="text-xl text-violet-900 font-black text-center mt-8"> Work in Progress</h1>
 </div>
 
-<div class="container">
-  <%= portefolios.each do |portefolio| %>
-    <%= render "card_project.html.erb" %>
-  <%= end %>
+<div class="grid grid-cols-4 gap-4 m-10">
+  <% @portefolios.each do |portefolio| %>
+    <%= link_to portefolio_path(portefolio) do %>
+      <%= render "portefolio/card_project", portefolio: portefolio %>
+    <% end %>
+  <% end %>
+  <% if user_signed_in?  %>
+    <%= link_to new_portefolio_path do %>
+      <%= render "portefolio/card_add_new_project"%>
+    <% end %>
+  <% end  %>
 </div>
