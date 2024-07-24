@@ -1,12 +1,18 @@
-<div class="row-span-4 border-2 rounded-lg border-purple-900">
-  <%= cl_image_tag @portefolio.photo, height: 300, width: 400, crop: :fill %>
-  <div class="text-violet-900 text-center text-xl font-black my-3">
-    <%= @portefolio.name %>
+<div class="row-span-4 border-2 rounded-lg border-purple-900 my-10 mx-16 flex">
+  <div>
+    <div class="my-3 ml-3">
+      <%= cl_image_tag @portefolio.photo, height: 300, width: 400, crop: :fill %>
+    </div>
+    <div>
+      <%= @portefolio.video %>
+    </div>
   </div>
-  <div class="">
-    <%= @portefolio.video %>
-  </div>
-  <div class="">
+  <div class="text-violet-900 my-3 mx-auto">
+    <div class="text-center text-xl font-black">
+      <%= @portefolio.name %>
+    </div>
+    <div>
     <%= @portefolio.presentation %>
+    </div>
   </div>
 </div>
