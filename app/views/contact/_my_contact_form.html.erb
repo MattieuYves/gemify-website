@@ -1,0 +1,42 @@
+<%= form_for @contact, url: contact_index_path, remote: true do |f| %>
+  <% if @contact.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this message from being sent:</h2>
+
+      <ul>
+        <% @contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+    <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md" id="contact-form">
+        <div class="text-center block my-3 text-4xl font-black leading-7 text-purple-900">
+          <h1>Contactez-nous !</h1>
+        </div>
+
+        <div class="col-md-6">
+          <%= f.label :name, class: "block mb-2 text-3xl font-black leading-7 text-purple-900"  %></br>
+          <%= f.text_field  :name, required: true, class: "shadow-sm bg-purple-900 border border-purple-300 text-purple-900 text-sm rounded-lg focus:ring-primary-500 focus:border-purple-600 block w-full p-2.5 dark:bg-white dark:border-purple-600 dark:placeholder-purple-400 dark:text-purple-900 dark:focus:ring-purple-500 dark:focus:border-purple-600 dark:shadow-sm-light", placeholder:"Test Example" %>
+        </div>
+
+        <div class="col-md-6">
+          <%= f.label :email, class: "block mb-1 mt-2 text-3xl font-black leading-7 text-purple-900" %></br>
+          <%= f.text_field :email, required: true, class: "block shadow-sm bg-purple-900 border border-purple-300 text-purple-900 text-sm rounded-lg focus:ring-primary-500 focus:border-purple-600 block w-full p-2.5 dark:bg-white dark:border-purple-600 dark:placeholder-purple-400 dark:text-purple-900 dark:focus:ring-purple-500 dark:focus:border-purple-600 dark:shadow-sm-light", placeholder:"test@example.com" %>
+        </div>
+
+      <%= f.label :message, class: "block mb-1 mt-2 text-3xl font-black leading-7 text-purple-900" %></br>
+      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "block shadow-sm bg-purple-900 border border-purple-300 text-purple-900 text-sm rounded-lg focus:ring-primary-500 focus:border-purple-600 block w-full p-2.5 dark:bg-white dark:border-purple-600 dark:placeholder-purple-400 dark:text-purple-900 dark:focus:ring-purple-500 dark:focus:border-purple-600 dark:shadow-sm-light",
+                        placeholder: "Votre message"%></br>
+
+      <div class= "hidden">
+        <%= f.label :nickname, class: "block mb-1 mt-2 text-3xl font-black leading-7 text-purple-900" %>
+        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
+      <%= f.submit 'Send Message', class: ' block rounded-lg px-4 py-2.5 text-base text-2xl font-black leading-7 text-white bg-purple-800 hover:bg-purple-900' %>
+    </div>
+  <% end %>

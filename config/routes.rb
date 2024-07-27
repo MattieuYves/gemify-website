@@ -8,7 +8,8 @@ Rails.application.routes.draw do
 
   resources :home, only: [:index]
   resources :portefolio, only: [:index, :show, :new, :destroy, :update]
-  resources :contact, only: [:index]
+  resources :contact, only: [:index, :new, :create]
+
   # Defines the root path route ("/")
   root "home#index"
 end
